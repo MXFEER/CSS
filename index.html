@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guía Rápida de CSS</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Guía Rápida de CSS</h1>
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h2>¿Qué es CSS?</h2>
+      <p>CSS (Cascading Style Sheets) permite aplicar estilos visuales a elementos HTML, como colores, tamaños y distribuciones. Es la herramienta que hace que tu web pase de ser un esqueleto a una obra de arte visual.</p>
+    </section>
+
+    <section>
+      <h2>1. Selector</h2>
+      <p>Indica a qué elementos HTML se aplicarán los estilos. Es como decir: "Quiero estilizar <strong>esto</strong>".</p>
+      <p><strong>Ejemplos comunes:</strong></p>
+      <ul>
+        <li><code>p</code> (para todos los párrafos)</li>
+        <li><code>h1</code> (para todos los títulos de nivel 1)</li>
+        <li><code>.clase</code> (para elementos con una clase específica, súper flexible)</li>
+        <li><code>#id</code> (para un único elemento con un ID, muy específico)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Propiedad</h2>
+      <p>Define qué aspecto se modificará. Piensa en ello como: "¿Qué característica de <strong>esto</strong> quiero cambiar?"</p>
+      <p><strong>Ejemplos populares:</strong></p>
+      <ul>
+        <li><code>color</code> (el color del texto)</li>
+        <li><code>font-size</code> (el tamaño del texto)</li>
+        <li><code>background-color</code> (el color de fondo)</li>
+        <li><code>margin</code>, <code>padding</code> (espaciado alrededor y dentro del elemento)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Valor</h2>
+      <p>Especifica cómo se aplicará el cambio de la propiedad. Es la respuesta a: "¿Cómo quiero cambiar esa característica?"</p>
+      <p><strong>Ejemplos concretos:</strong></p>
+      <ul>
+        <li><code>blue</code> (para el color)</li>
+        <li><code>16px</code> (para el tamaño de fuente o espaciado)</li>
+        <li><code>lightgreen</code> (para el color de fondo)</li>
+        <li><code>bold</code> (para el grosor de la fuente)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Tips para un CSS más eficiente</h2>
+      <ul>
+        <li>Usa <code>;</code> después de cada propiedad para evitar errores.</li>
+        <li>Agrupa múltiples reglas en un solo bloque para mayor orden.</li>
+        <li>Organiza tu CSS por secciones (ej. tipografía, layout) para mantenerlo claro y fácil de mantener.</li>
+        <li>En Visual Studio Code, para generar rápidamente la estructura básica de un documento HTML, escribe <code>!</code> y presiona <kbd>Tab</kbd>.</li>
+        <li>Instala la extensión **Beautify** para que el código se autoformatee y mantenga la indentación clara (¡adiós al código desordenado!).</li>
+        <li>Instala **Live Server** para ver los cambios en tiempo real al guardar (<kbd>Ctrl</kbd> + <kbd>S</kbd>). Basta con hacer clic derecho en el archivo HTML y seleccionar "Open with Live Server".</li>
+        <li>Instala **VSCode Icons** para mejorar la visualización de archivos con iconos personalizados en el explorador y encontrar todo más rápido.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ejemplo de Regla CSS</h2>
+      <p>Así es como se ve una regla CSS completa:</p>
+      <pre><code>p {
+  color: blue; /* El texto de los párrafos será azul */
+  font-size: 20px; /* El tamaño de la fuente de los párrafos será de 20 píxeles */
+}</code></pre>
+      <p>¡Sencillo, verdad?</p>
+    </section>
+
+    <section>
+      <h2>Formas de agregar estilos CSS</h2>
+
+      <h3>1. Estilos en Línea (Inline Styles)</h3>
+      <p>Esta forma es la menos recomendada para proyectos grandes, ya que mezcla el estilo directamente en el HTML. Se usa la propiedad <code>style</code> dentro de la etiqueta HTML.</p>
+      <p><strong>Ejemplo:</strong></p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Introducción CSS&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2 style="color: red; border: 1px solid black;"&gt;Hola Mundo&lt;/h2&gt;
+  &lt;h2 style="color: green; border: 5px solid gray;"&gt;Hola Mundo 2&lt;/h2&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <h3>2. Estilos Internos (Internal/Embedded Styles)</h3>
+      <p>Aquí, los estilos se definen en la sección <code>&lt;head&gt;</code> de tu documento HTML, dentro de la etiqueta <code>&lt;style&gt;</code>. Útil para estilos específicos de una sola página.</p>
+      <p><strong>Ejemplo:</strong></p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Estilos Internos&lt;/title&gt;
+  &lt;style&gt;
+    h1 {
+      color: purple;
+      text-align: center;
+    }
+    .destacado {
+      font-weight: bold;
+      background-color: yellow;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Mi Título con Estilo&lt;/h1&gt;
+  &lt;p class="destacado"&gt;Este es un párrafo destacado.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <h3>3. Estilos Externos (External Styles)</h3>
+      <p>Esta es la forma más común, limpia y recomendada. Los estilos se escriben en un archivo <code>.css</code> separado y se enlazan al documento HTML usando la etiqueta <code>&lt;link&gt;</code> en la sección <code>&lt;head&gt;</code>. Ideal para mantener tu código organizado y reutilizable.</p>
+      <p><strong>Ejemplo de <code>index.html</code>:</strong></p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Estilos Externos&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Página con Estilos Externos&lt;/h1&gt;
+  &lt;p&gt;Este texto se estiliza desde un archivo CSS.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      <p><strong>Ejemplo de <code>styles.css</code> (en el mismo directorio):</strong></p>
+      <pre><code>body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+h1 {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+p {
+  line-height: 1.6;
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>¡Aprende CSS con diversión!</h2>
+      <p>Explora, experimenta y no tengas miedo de probar cosas nuevas. ¡CSS es un mundo de creatividad!</p>
+    </section>
+
+  </main>
+</body>
+</html>
